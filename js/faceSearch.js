@@ -3,7 +3,7 @@ const statusEl2 = window.__statusEl;
 
 // Ganti dengan base URL backend kamu (Render/Railway, dll) jika beda origin.
 // Contoh: const API_BASE = "https://photobooth-backend.onrender.com";
-const API_BASE = "https://photobooth-backend-grp3.onrender.com"; // kosong = same origin
+const API_BASE = "https://photobooth-backend-aws.onrender.com://photobooth-backend-grp3.onrender.com"; // kosong = same origin
 
 function apiUrl(path) {
   if (!API_BASE) return path;
