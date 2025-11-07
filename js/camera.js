@@ -30,14 +30,14 @@ async function startCamera() {
     statusEl.textContent = "Meminta izin kamera...";
     const constraints = {
       video: {
-        facingMode: { ideal: "environment" },
+        facingMode: { ideal: "user" }, // 🔹 kamera depan
         width: { ideal: 640 },
         height: { ideal: 480 }
       },
       audio: false
     };
 
-    stream = await navigator.mediaDevices.getUserMedia(constraints);
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
     videoEl.srcObject = stream;
 
     statusEl.textContent = "Kamera aktif. Posisikan wajahmu di dalam frame.";
