@@ -52,7 +52,7 @@ async function handleFaceSearch() {
   // Untuk sekarang, folder Drive bisa di-hardcode per event,
   // atau kamu bisa mapping slug -> folder di sisi frontend.
   // Contoh sementara: gunakan slug sebagai folder ID.
-  const folderInput = slug; 
+  const folderInput = "1ALbDHNvmSM5Ow5EQPWGlNgnkzhfKSlJF"; 
   formData.append("folder", folderInput);
 
   statusEl2.textContent = "Mencari fotomu di galeri event...";
