@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Find Your Photo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- WELCOME SCREEN -->
+    <section id="welcomeSection">
+      <h1 id="eventName">Loading event...</h1>
+      <p class="welcome-text">
+        Selamat datang di photobooth!<br/>
+        Di halaman ini kamu bisa menemukan fotomu hanya dengan scan wajah.
+      </p>
+      <button id="welcomeStartBtn">Mulai Scan Wajah</button>
+      <p class="hint">
+        Setelah menekan tombol, kamu akan diminta mengizinkan akses kamera.<br/>
+        Gunakan kamera belakang untuk hasil terbaik.
+      </p>
+    </section>
+
+    <!-- SCANNER SCREEN -->
+    <section id="scannerSection" style="display:none;">
+      <h2 class="scanner-title">Scan Wajah Kamu</h2>
+      <div id="status">Menghubungkan ke kamera…</div>
+
+      <!-- Preview kamera -->
+      <video id="camera" autoplay playsinline muted></video>
+
+      <!-- Tombol untuk mulai kamera (wajib Safari/iOS) -->
+      <button id="startCameraBtn">Aktifkan Kamera</button>
+
+      <!-- Tombol scan wajah -->
+      <button id="scanBtn" disabled>Scan Wajah Saya</button>
+
+      <p class="hint">
+        Pastikan wajahmu jelas di dalam frame, tanpa tertutup masker/kacamata gelap.
+      </p>
+
+      <!-- Hasil foto -->
+      <div id="results"></div>
+    </section>
+  </div>
+
+  <script src="./js/camera.js"></script>
+  <script src="./js/faceSearch.js"></script>
+</body>
+</html>
